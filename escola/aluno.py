@@ -1,4 +1,5 @@
 import pytest
+from etapa.resultado import calcular_media_do_aluno
 
 def calcular_media(valor:list[float]) -> float:
     """"
@@ -24,11 +25,11 @@ def calcular_media(valor:list[float]) -> float:
         elif i > 10:
             raise ValueError("numero tem que ser menor ou igual a 10")
         
-        
     soma = 0
     divisao = len(valor)
-    for i in valor:
-        soma+=i
-        print(soma/divisao)
+    for l in valor:
+        soma+=l
 
+    
     return float("{:.1f}".format(soma/divisao))
+
