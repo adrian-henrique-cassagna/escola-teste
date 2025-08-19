@@ -1,7 +1,6 @@
 import pytest
 from etapa.resultado import calcular_media_do_aluno
 
-
 def test_com_nota_string():
     nota = ''
 

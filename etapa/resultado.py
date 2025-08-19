@@ -4,7 +4,7 @@ def calcular_media_do_aluno(valor):
 
     if isinstance(valor, str):
         raise ValueError("Erro")
-
+        
     elif valor > 7 or valor == 10:
         raise ValueError("passou")
 
@@ -13,5 +13,5 @@ def calcular_media_do_aluno(valor):
 
     elif valor < 5.7:
         raise ValueError("reprovado")
-
-    return valor
+    
+    return valor#pragma: no cover

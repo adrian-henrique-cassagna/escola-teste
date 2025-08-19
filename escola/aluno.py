@@ -1,6 +1,5 @@
 import pytest
 from etapa.resultado import calcular_media_do_aluno
-from IntegrarNotas.integrador import test_passou_reprovou_recuperacao_definitivo
 
 def calcular_media(valor:list[float]) -> float:
     """"
@@ -30,7 +29,5 @@ def calcular_media(valor:list[float]) -> float:
     divisao = len(valor)
     for l in valor:
         soma+=l
-
-    
-    return float("{:.1f}".format(soma/divisao))
-
+    r = soma/divisao
+    return float("{:.1f}".format(r))
