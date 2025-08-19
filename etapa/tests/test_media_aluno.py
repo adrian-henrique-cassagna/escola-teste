@@ -3,25 +3,25 @@ from etapa.resultado import calcular_media_do_aluno
 
 
 def test_com_nota_string():
-    nota = ""
+    nota = ''
 
-    with pytest.raises(ValueError, match = "Por favor, digite um valor válido"):
+    with pytest.raises(ValueError, match = "Erro"):
         calcular_media_do_aluno(nota)
 
 def test_com_nota_alta():
-    nota = 9
+    nota = 9.0
 
     with pytest.raises(ValueError, match = "passou"):
         calcular_media_do_aluno(nota)
 
 def test_com_nota_baixa():
-    nota = 5.7
+    nota = 6.0
 
     with pytest.raises(ValueError, match = "recuperação"):
         calcular_media_do_aluno(nota)
 
 def test_com_nota_reprovado():
-    nota = 2
+    nota = 2.0
 
     with pytest.raises(ValueError, match = "reprovado"):
         calcular_media_do_aluno(nota)

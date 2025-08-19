@@ -3,17 +3,15 @@ import pytest
 def calcular_media_do_aluno(valor):
 
     if isinstance(valor, str):
-        print("erro")
+        raise ValueError("Erro")
 
-    if valor > 7 or valor == 10:
-        print("aprovado")
+    elif valor > 7 or valor == 10:
+        raise ValueError("passou")
 
-    if valor < 7 or valor == 5.7:
-        print("recuperação")
+    elif valor < 7 and valor > 5.6:
+        raise ValueError("recuperação")
 
-    if valor < 5.7:
-        print("reprovado")
+    elif valor < 5.7:
+        raise ValueError("reprovado")
 
     return valor
-
-calcular_media_do_aluno()
